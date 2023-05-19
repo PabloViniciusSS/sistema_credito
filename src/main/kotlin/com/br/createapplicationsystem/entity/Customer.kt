@@ -1,6 +1,7 @@
 package com.br.createapplicationsystem.entity
 
 import jakarta.persistence.*
+import java.math.BigDecimal
 import java.net.Inet4Address
 
 
@@ -11,6 +12,7 @@ data class Customer (
     @Column(nullable = false) var lastName: String = "",
     @Column(nullable = false) val cpf: String,
     @Column(nullable = false) var email: String = "",
+    @Column(nullable = false) var income: BigDecimal = BigDecimal.ZERO,
     @Column(nullable = false) var password: String = "",
     @Column(nullable = false) @Embedded var address: Address = Address(),
     @Column(nullable = false) @OneToMany(fetch = FetchType.LAZY,
