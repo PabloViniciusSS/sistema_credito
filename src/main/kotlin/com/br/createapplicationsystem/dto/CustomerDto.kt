@@ -16,7 +16,7 @@ data class CustomerDto (
     @field:NotNull(message = "Invalido dados") val income: BigDecimal,
     @field:NotEmpty(message = "Precisa digitar um email")
     @field:Email(message = "Email invalido") val email: String,
-    @field:NotEmpty(message = "Precisa digitar uma senha") val passaword: String,
+    @field:NotEmpty(message = "Precisa digitar uma senha") val password: String,
     @field:NotEmpty(message = "Precisa digitar um cep") val zipcode: String,
     @field:NotEmpty(message = "Precisa digitar uma rua ") val street: String
 ){
@@ -27,7 +27,7 @@ data class CustomerDto (
         cpf = this.cpf,
         income = this.income,
         email = this.email,
-        password = this.passaword,
+        password = this.password,
         address = Address(
             zipcode = this.zipcode,
             street = this.street
